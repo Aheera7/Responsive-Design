@@ -1,5 +1,5 @@
 body {
-    background-image: url(images/dark-background.png);
+    background-image: url(dark-background.png);
     max-width: 100%;
     height: auto;
 
@@ -135,7 +135,7 @@ main {
     /*background settings same as body background considering responsiveness*/
     /*Considering Responsiveness you can also set different images for different screen sizes if it is important to the site or if needed.*/
 
-    background-image: url(images/pexels-lisa-fotios-16129724.jpg); /*fyi- image is from pexels.com so copyright free.*/
+    background-image: url(pexels-lisa-fotios-16129724.jpg); /*fyi- image is from pexels.com so copyright free.*/
 
     /*new thing i learned, opacity, so i added the image and adjusted the opacity as well*/ 
     
