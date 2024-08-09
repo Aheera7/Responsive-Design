@@ -1,0 +1,179 @@
+body {
+    background-image: url(images/dark-background.png);
+    max-width: 100%;
+    height: auto;
+
+    /*if height property is set to Auto the image will scale up and down it has to adding to the responsiveness*/
+
+    /*width =100% alows image to scale up and down, but i used "max-width' so that it does not scale more than its original size.
+    It can be totally SUBJECTIVE, as both elements demonstarte responsiveness*/
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    /*background size set to cover helps it adjust to the screensize better*/
+
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* The box sizing property ensures that the padding and margin are included in width and height of an element */
+    /* if not using this, the elements might appear bigger than they actually are */ 
+
+    /*grid layout makes it a bit more presentable ;and helps arrange the content of the webpage better. */
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+
+}
+h1 {   /*Font Linked in html file*/
+    
+        font-family: "Black Ops One", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      
+      
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 50px;
+        color: whitesmoke;
+}
+
+h2{ /*Font Linked in html file*/
+
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    color: white;
+}
+
+p{
+    font-size: medium;
+    text-align: justify;
+    color: white;
+    opacity: 1; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h3{
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+/* similar settings to add uniformity to the webpage*/ 
+header, nav, main, footer {
+    margin: 20px;
+    padding: 20px;
+}
+
+nav button {
+    background-color: #444;/*dark grey*/
+    color: #fff; /*white*/
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    /* box shadow adds a bit more depth */
+}
+
+nav button:hover { /*Adds a bit more detail*/
+
+    background-color: #333;
+}
+
+header {
+    background-color: #000; /* black*/
+    color: #fff; 
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+
+nav {
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    grid-area: main;
+
+
+    /*background settings same as body background considering responsiveness*/
+    /*Considering Responsiveness you can also set different images for different screen sizes if it is important to the site or if needed.*/
+
+    background-image: url(images/pexels-lisa-fotios-16129724.jpg); /*fyi- image is from pexels.com so copyright free.*/
+
+    /*new thing i learned, opacity, so i added the image and adjusted the opacity as well*/ 
+    
+    opacity: 0.8;
+    max-width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);
+
+    
+}
+
+footer {
+    grid-area: footer;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsive Design */
+/* This tag ensures that the CSS properties mentioned are only applied if the condition specified is true */
+/* Condition specified below helps in specifying layout for smaller screen sizes such as smartphones or tablets. */
+
+@media only screen and (max-width: 600px) {
+    nav {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
